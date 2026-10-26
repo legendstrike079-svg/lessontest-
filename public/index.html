@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172b16">
+  <meta name="description" content="Cloudy Playz PvP Academy — affordable Minecraft PvP lessons and practice guides.">
+  <title>Cloudy Playz | Minecraft PvP Academy</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#"><span class="brand-icon">☁</span> CLOUDY <b>PLAYZ</b></a>
+    <div class="nav-right">
+      <a href="#lessons">PvP Lessons</a><a href="#status">Server status</a>
+      <button class="btn btn-ghost" id="navLogin">Log in</button>
+      <button class="btn btn-primary" id="navSignup">Get started</button>
+      <button class="btn btn-ghost hidden" id="navDashboard">Dashboard</button>
+      <button class="btn btn-ghost hidden" id="navLogout">Log out</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="pill"><span class="pulse"></span> ⛏ MINECRAFT PvP ACADEMY</div>
+      <h1>MASTER THE<br><span class="gradient">PvP ARENA.</span></h1>
+      <p class="hero-copy">Level up your Minecraft PvP with affordable lessons, combo guides, aim training, movement tips, and practice strategies made for every player.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-large" id="heroSignup">JOIN THE WORLD <span>↗</span></button>
+        <a class="btn btn-ghost btn-large" href="#lessons">⛏ Browse lessons</a>
+      </div>
+      <div class="mini-stats">
+        <div><strong>⚔ PvP</strong><span>Train smarter</span></div>
+        <div><strong>₨ Low</strong><span>Player-friendly prices</span></div>
+        <div><strong>100%</strong><span>Minecraft vibes</span></div>
+      </div>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    </section>
+
+    <section class="section lessons-section" id="lessons">
+      <div class="section-heading"><div><div class="eyebrow">📦 LOOT YOUR NEXT SKILL</div><h2>Choose your PvP lesson</h2></div><span class="status-badge online">STARTER PRICES</span></div>
+      <div class="lesson-grid">
+        <article class="lesson-card"><div class="block-art grass-art">⚔️</div><div class="lesson-body"><span class="lesson-tag">BEGINNER</span><h3>Combat Basics</h3><p>Learn spacing, timing, strafing, and how to start winning more fights.</p><div class="lesson-bottom"><strong>₹29</strong><button class="btn btn-primary lesson-buy" data-lesson="Combat Basics" data-price="29">Unlock</button></div></div></article>
+        <article class="lesson-card"><div class="block-art diamond-art">💎</div><div class="lesson-body"><span class="lesson-tag">POPULAR</span><h3>Combo & Aim</h3><p>Improve aim tracking, hit timing, W-tapping, and combo consistency.</p><div class="lesson-bottom"><strong>₹49</strong><button class="btn btn-primary lesson-buy" data-lesson="Combo & Aim" data-price="49">Unlock</button></div></div></article>
+        <article class="lesson-card"><div class="block-art nether-art">🧱</div><div class="lesson-body"><span class="lesson-tag">MOVEMENT</span><h3>Movement & Bridging</h3><p>Practice movement control, sprint resets, and bridging fundamentals.</p><div class="lesson-bottom"><strong>₹39</strong><button class="btn btn-primary lesson-buy" data-lesson="Movement & Bridging" data-price="39">Unlock</button></div></div></article>
+        <article class="lesson-card"><div class="block-art enchant-art">✨</div><div class="lesson-body"><span class="lesson-tag">ADVANCED</span><h3>Advanced PvP Guide</h3><p>Review decision-making, combos, positioning, and smart practice routines.</p><div class="lesson-bottom"><strong>₹79</strong><button class="btn btn-primary lesson-buy" data-lesson="Advanced PvP Guide" data-price="79">Unlock</button></div></div></article>
+      </div>
+      <p class="muted small lesson-note">Demo lesson cards: connect the unlock buttons to your configured checkout and lesson-delivery flow before accepting payments.</p>
+    </section>
+
+    <section class="section" id="status">
+      <div class="section-heading"><div><div class="eyebrow">LIVE CONNECTION</div><h2>Minecraft server status</h2></div><button class="btn btn-ghost" id="refreshStatus">↻ Refresh</button></div>
+      <div class="status-card">
+        <div class="status-symbol" id="statusSymbol">☁</div>
+        <div class="status-text"><h3 id="statusTitle">Checking server…</h3><p id="statusDescription">Getting the latest status.</p></div>
+        <span class="status-badge" id="statusBadge">CHECKING</span>
+      </div>
+      <p class="muted small">Configure the Java server address in your <code>.env</code> file. Status updates when this page checks the status endpoint.</p>
+    </section>
+
+    <section class="section features">
+      <div class="eyebrow">🪓 BUILT FOR BLOCK-BY-BLOCK PROGRESS</div><h2>Your PvP journey, all in one place.</h2>
+      <div class="feature-grid">
+        <article class="feature-card"><span>⚔️</span><h3>PvP training</h3><p>Browse affordable lessons and build your combat skills one step at a time.</p></article>
+        <article class="feature-card"><span>🛡️</span><h3>Player dashboard</h3><p>Sign in to access your account and continue building your learning hub.</p></article>
+        <article class="feature-card"><span>🏰</span><h3>Private practice rooms</h3><p>Plan private lesson rooms and student-coach chat rooms as the next backend feature.</p></article>
+      </div>
+    </section>
+
+    <section class="section account-section hidden" id="accountArea">
+      <div class="section-heading"><div><div class="eyebrow">YOUR SPACE</div><h2 id="accountHeading">Dashboard</h2></div><span class="status-badge online">SIGNED IN</span></div>
+      <div class="dashboard-grid">
+        <article class="panel"><div class="panel-label">ACCOUNT</div><h3 id="welcomeName">Welcome!</h3><p class="muted" id="accountEmail"></p><div class="detail-row"><span>Role</span><strong id="accountRole">User</strong></div><div class="detail-row"><span>Member since</span><strong id="accountCreated">—</strong></div></article>
+        <article class="panel"><div class="panel-label">QUICK ACTION</div><h3>Support the project</h3><p class="muted">Make a secure checkout order with Razorpay once you configure your keys.</p><label for="paymentAmount">Amount (INR)</label><input id="paymentAmount" type="number" min="1" max="50000" value="100"><button class="btn btn-primary full" id="payButton">Continue to payment</button><p class="small muted" id="paymentMessage">Payments are optional and require Razorpay configuration.</p></article>
+      </div>
+      <div class="panel admin-panel hidden" id="adminPanel"><div class="section-heading"><div><div class="eyebrow">RESTRICTED AREA</div><h2>Admin panel</h2></div><span class="status-badge">ADMIN</span></div><div class="admin-stats"><div><span>Total users</span><strong id="totalUsers">—</strong></div><div><span>Admins</span><strong id="totalAdmins">—</strong></div></div><h3>Recently joined</h3><div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th></tr></thead><tbody id="usersTable"></tbody></table></div></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-icon">☁</span> CLOUDY <b>PLAYZ</b></a><p>Mine skills. Master PvP. Play your way.</p><span>© <span id="year"></span> Cloudy Playz</span></footer>
+
+  <div class="modal hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card"><button class="modal-close" id="closeModal" aria-label="Close">×</button><div class="eyebrow">⛏ ENTER THE WORLD</div><h2 id="authTitle">Create your account</h2><p class="muted" id="authSubtitle">Join the community and open your dashboard.</p>
+      <form id="authForm"><div id="nameField"><label for="name">Display name</label><input id="name" name="name" autocomplete="name" minlength="2" maxlength="40" required></div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required><p class="form-message" id="authMessage"></p><button class="btn btn-primary full" id="authSubmit" type="submit">Create account</button></form>
+      <p class="switch-auth" id="switchAuthText">Already have an account? <button id="switchAuth" class="text-button">Log in</button></p>
+    </div>
+  </div>
+  <div class="toast hidden" id="toast"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
